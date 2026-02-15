@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  color: white;
+  background: url('images/shiva-Parvati.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+button {
+  padding: 15px 25px;
+  font-size: 1.2em;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 2s; /* Button appears after greeting */
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+#reason {
+  margin-top: 30px;
+  font-size: 1.2em;
+  max-width: 600px;
+  display: none;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
